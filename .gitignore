@@ -1,0 +1,7 @@
+.settings/
+logs/
+*.logs
+.classpath
+.project
+pom.xml
+target/
