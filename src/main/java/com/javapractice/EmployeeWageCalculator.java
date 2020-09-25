@@ -4,11 +4,10 @@ public class EmployeeWageCalculator {
 
 	public static final int partTime=1;
 	public static final int fullTime=2;
-	public static final int ratePerHour=20;
-	public static final int maxWorkingDays=20;
-	public static final int maxWorkingHours=100;
 	
-	public static void computeEmpWage()
+	
+	
+	public static void computeEmpWage(String company, int maxWorkingHours, int maxWorkingDays, int ratePerHour)
 	{
 		int totalWage=0, totalworkingHrs=0, empHrs=0, totalWorkingHrs=0, workingDay=1; 
 		
@@ -32,11 +31,12 @@ public class EmployeeWageCalculator {
 			workingDay++;
 		}
 		totalWage=totalWorkingHrs*ratePerHour;
-		System.out.println("Total Employee Wage: "+ totalWage);
+		System.out.println("Total Employee Wage for company "+ company + " :" + totalWage);
 	}
 	
 	public static void main(String args[])
 	{
-		computeEmpWage();
+		computeEmpWage("Dmart", 20, 2, 10);
+		computeEmpWage("Reliance", 10, 4, 20);
 	}
 }
